@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css">
   </head>
  
-  <body background="http://free.wallpaperbackgrounds.com/pattern/black/78217-39682.jpg">
+  <body background="http://365psd.com/images/previews/e55/5-blurred-backgrounds-image-2013Part-2-Background-16-without-Glare.jpg" style="background-size: auto 100%">
     
   <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -50,27 +50,29 @@
   </div><!-- /.container-fluid -->
 </nav>  
   <div class="row text-center">
-  <h1 class="text-center" top-margin="1000px"><font color="white">Volunteer Opportunities</font></h1>
+  <h1 class="text-center" top-margin="1000px"><font>Who Can You Help Today?</font></h1>
   <img src="http://www.dbqhumane.org/dbqhumane/site_files/editor_files/image/image/volunteer.jpg">
-  <h2 class="text-center"><font color="white">Select Several Characteristics That You View As Essential In A Volunteer Organization And We Will Match You With A Local Group</font></h2>
+  <div width: 50% float="left">
+     <h2 class="text-center">Select Several Characteristics That You View As Essential In A Volunteer Organization And We Will Match You With A Local Group</h2>
+  </div>
   </div>
  <table class='table table-hover table-responsive table-bordered'>
           <tr>
-            <th><font color="white">Name</font></th>
-            <th><font color="white">Address</font></th>
-            <th><font color="white">Phone</font></th>
-            <th><font color="white">Age</font></th>
-            <th><font color="white">Website</font></th>
-            <th><font color="white">Tags</font></th>
+            <th><font>Name</font></th>
+            <th><font>Address</font></th>
+            <th><font>Phone</font></th>
+            <th><font>Age</font></th>
+            <th><font>Website</font></th>
+<!--             <th><font>Tags</font></th> -->
           </tr>
 <%@data.each do |row|%>        
           <tr>
-            <td><font color="white"><%=row[:name]%></font></td>
-            <td><font color="white"><%=row[:address]%></font></td>
-            <td><font color="white"><%=row[:phone]%></font></td>
-            <td><font color="white"><%=row[:age]%></font></td>
-            <td><font color="white"><%=row[:website]%></font></td>
-            <td><font color="white"><%=row[:tags]%></font></td>  
+            <td><font><%=row[:name]%></font></td>
+            <td><font><%=row[:address]%></font></td>
+            <td><font><%=row[:phone]%></font></td>
+            <td><font><%=row[:age]%></font></td>
+            <td><font><%=row[:website]%></font></td>
+<!--             <td><font><%=row[:tags]%></font></td>   -->
           </tr>
           <%end%>
 

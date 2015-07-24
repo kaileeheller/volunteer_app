@@ -24,6 +24,11 @@ class MyApp < Sinatra::Base
     erb :about
   end
   
+#   get 'filter' do
+#     tag_value= :tags
+#     erb :index
+#   end
+    
   def parse
     rows=[]
     IO.foreach("./organizations.csv") do |line| 
