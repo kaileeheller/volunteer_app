@@ -1,16 +1,29 @@
 require 'bundler'
 Bundler.require
-require_relative 'models/pig_latinize.rb'
+# require_relative 'models/volunteer.rb'
+
 class MyApp < Sinatra::Base 
 
   get '/' do
+#     v=Volunteer.new
+#     @data=v.parse
     erb :index
   end
-
-  post '/results' do
-    user_sentence=params[:sentence]
-    @translated_sentence=to_pig_latin(user_sentence)
-    erb :results 
+  
+  get '/contact' do
+    erb :contact
   end
+  
+  get '/home' do
+#      v=Volunteer.new
+#     @data=v.parse
+    erb :index
+  end
+  
+  get '/about' do
+    erb :about
+  end
+  
+  
 
 end
