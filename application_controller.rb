@@ -28,8 +28,11 @@ class MyApp < Sinatra::Base
     @data=parse
     if not params["tag_value"].nil?
 #       @data=filter(@data, params["tag_value"])
+      puts params["tag_value"] + " d"
       @data.keep_if do |hash|
-      hash["tags"]==params["tag_value"]
+        puts hash["tags"]==(params["tag_value"])
+        hash["tags"].chomp==params["tag_value"]
+        
     end  
 #     return data
     end
