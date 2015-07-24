@@ -24,10 +24,18 @@ class MyApp < Sinatra::Base
     erb :about
   end
   
-#   get 'filter' do
-#     tag_value= :tags
-#     erb :index
-#   end
+  get '/filter' do
+    @data=parse
+    if not params["tag_value"].nil?
+#       @data=filter(@data, params["tag_value"])
+      @data.keep_if do |hash|
+      hash["tags"]==params["tag_value"]
+    end  
+#     return data
+    end
+    
+    erb :index
+  end
     
   def parse
     rows=[]
@@ -39,11 +47,10 @@ class MyApp < Sinatra::Base
         :phone => lst[2],
         :age => lst[3],
         :website => lst[4],
-        :tags => lst[5] }
+        "tags" => lst[5] }
       rows.push(row)
     end
     return rows
   end
-  
 
 end

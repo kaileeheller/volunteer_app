@@ -56,13 +56,28 @@
      <h2 class="text-center">Select Several Characteristics That You View As Essential In A Volunteer Organization And We Will Match You With A Local Group</h2>
   </div>
   </div>
- <table class='table table-hover table-responsive table-bordered'>
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Characteristic
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Medical</a></li>
+    <li><a href="#">People</a></li>
+    <li><a href="#">Animals</a></li>
+    <li><a href="#">Education</a></li>
+    <li><a href="#">Faith</a></li>
+    <li><a href="#">Fitness</a></li>
+    <li><a href="#">Nature</a></li>
+  </ul>
+</div>
+ <table class='table table-hover table-responsive table-bordered' style="border:1px solid black">
           <tr>
-            <th><font>Name</font></th>
-            <th><font>Address</font></th>
-            <th><font>Phone</font></th>
-            <th><font>Age</font></th>
-            <th><font>Website</font></th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Age</th>
+            <th>Website</th>
 <!--             <th><font>Tags</font></th> -->
           </tr>
 <%@data.each do |row|%>        
