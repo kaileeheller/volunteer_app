@@ -1,17 +1,17 @@
-class Volunteer
-  attr_reader :organizations
+# class Volunteer
+#   attr_reader :organizations
   
-  def intialize
-    @organizations= self.parse  
-  end
+#   def intialize
+#     @organizations= self.parse  
+#   end
   
-  def add_organization (name, address, phone, age, website, tags)
-    @organizations.push ({:name => name, :address => address, :phone => phone, :age => age, :website => website, :tags => tags})
-  end
+#   def add_organization (name, address, phone, age, website, tags)
+#     @organizations.push ({:name => name, :address => address, :phone => phone, :age => age, :website => website, :tags => tags})
+#   end
   
   def parse
     rows=[]
-    IO.foreach("../organizations.txt") do |line| 
+    IO.foreach("../organizations.csv") do |line| 
       lst=line.split(",")
       row={
         :name => lst[0],
@@ -24,8 +24,10 @@ class Volunteer
     end
     return rows
   end
-end
-kailee=Volunteer.new
-puts kailee.parse
+# end
+# kailee=Volunteer.new
+# puts kailee.parse
+puts parse
+
 
   
