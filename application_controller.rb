@@ -30,7 +30,7 @@ class MyApp < Sinatra::Base
 #       @data=filter(@data, params["tag_value"])
       puts params["tag_value"] + " d"
       @data.keep_if do |hash|
-        puts hash["tags"]==(params["tag_value"])
+#         puts hash["tags"]==(params["tag_value"])
         hash["tags"].chomp==params["tag_value"]
         
     end  
